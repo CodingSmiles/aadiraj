@@ -67,7 +67,7 @@ function end(timeStamp) {
   clearTimeout(timeout);
 
   if (!lightsOutTime) {
-    time.textContent = "Jump start!";
+    time.textContent = "Jump Start!";
     time.classList.add('anim');
     return;
   }
@@ -110,7 +110,3 @@ addEventListener('mousedown', event => {
 addEventListener('keydown', event => {
   if (event.key == ' ') tap(event);
 }, {passive: false});
-
-if (navigator.serviceWorker) {
-  navigator.serviceWorker.register('/sw.js');
-}
