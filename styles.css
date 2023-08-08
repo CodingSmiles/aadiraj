@@ -65,7 +65,7 @@ p {
   font-size: 22px;
   text-align: center;
   line-height: 1.4;
-  margin: 2em;
+  margin: 1em;
   margin-bottom: 0;
   font-family: "Raleway Heavy";
 }
@@ -96,7 +96,7 @@ p {
 
 .border {
   margin: 1rem;
-  border: 1px solid #c0b9b9;
+  border: 1px solid #ada6a6;
   background: white;
   border-radius: 2em;
 }
