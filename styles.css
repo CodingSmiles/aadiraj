@@ -122,7 +122,7 @@ p {
   right: 25px;
   width: 80px;
   height: 80px;
-  background-color: rgba(222, 56, 10, 0.895);
+  background-color: rgba(255, 0, 0, 0.895);
   color: white;
   border-radius: 50%;
   display: flex;
@@ -130,7 +130,7 @@ p {
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 14px;
+  font-size: 110%;
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
   z-index: 1000;
@@ -154,8 +154,8 @@ p {
   pointer-events: none;
 }
 
-/* Animation for the size increase and decrease effect */
-@keyframes sizeChange {
+/* heart style effect */
+/* @keyframes sizeChange {
 
   0%,
   100% {
@@ -172,6 +172,20 @@ p {
 
   50% {
     transform: scale(1.1);
+  }
+
+} */
+
+/* normal size style effect */
+@keyframes sizeChange {
+
+  0%,
+  100% {
+    transform: scale(1.2);
+  }
+
+  50% {
+    transform: scale(0.98);
   }
 
 }
