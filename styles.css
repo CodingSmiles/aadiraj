@@ -116,7 +116,7 @@ p {
 
 
 #floating-badge {
-  font-family: "Inter";
+  font-family: inter;
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -140,34 +140,43 @@ p {
 
 /* Animation for the size increase and decrease effect */
 @keyframes sizeChange {
-  0%, 100% {
-      transform: scale(1);
+
+  0%,
+  100% {
+    transform: scale(1);
   }
+
   50% {
-      transform: scale(1.2);
+    transform: scale(1.2);
   }
 }
 
-
-@font-face {
-  font-family: 'Noto Sans';
-  src: url('noto-sans.ttf');
+.kode-mono {
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
-@font-face {
-  font-family: "Kode Mono";
-  src: url('kode-mono.ttf');
+
+.noto-sans {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 
-@font-face {
-  font-family: "Inter";
-  src: url('inter.ttf');
+
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
 }
 
-@font-face {
-  font-family: "Inter Tight";
-  src: url('inter-tight.ttf');
-}
+
+
 
 @keyframes bang {
   from {
