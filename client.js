@@ -128,6 +128,10 @@ addEventListener('mousedown', event => {
   if (event.button === 0) tap(event);
 }, {passive: false});
 
+document.getElementById('floating-badge').addEventListener('click', function() {
+  window.open('https://www.youtube.com/watch?v=xvFZjo5PgG0', '_blank');
+});
+
 addEventListener('keydown', event => {
   if (event.key == ' ') tap(event);
 }, {passive: false});
