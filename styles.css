@@ -148,11 +148,6 @@ p {
   }
 }
 
-/* Explode effect */
-.explode {
-  transform: scale(2);
-  opacity: 0;
-}
 
 @font-face {
   font-family: 'Noto Sans';
