@@ -62,6 +62,27 @@ function start() {
   raf = requestAnimationFrame(frame);
 }
 
+// Function to update badge color with the size change animation
+function updateBadgeColor() {
+  var badge = document.getElementById('floating-badge');
+
+  badge.style.transition = 'transform 0.5s ease, opacity 0.5s ease'; // Smooth transition for size change
+  badge.classList.add('size-change');
+
+  // Remove animation class after the animation ends
+  setTimeout(function() {
+      badge.classList.remove('size-change');
+  }, 500); // 500 milliseconds
+}
+
+// Call updateBadgeColor initially
+updateBadgeColor();
+
+// Interval to update badge color and trigger animation every 3 seconds
+setInterval(updateBadgeColor, 3000); // Update every 3 seconds
+
+
+
 function end(timeStamp) {
   cancelAnimationFrame(raf);
   clearTimeout(timeout);

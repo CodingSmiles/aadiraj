@@ -2,7 +2,7 @@ html {
   height: 100%;
   font-family: sans-serif;
   overflow-x: auto;
-  overflow-y: hidden;
+  overflow-y: scroll;
 }
 
 body {
@@ -62,7 +62,7 @@ body {
 }
 
 p {
-  font-size: 24.5px;
+  font-size: 120%;
   text-align: center;
   line-height: 1.4;
   margin: 1em;
@@ -71,7 +71,7 @@ p {
 }
 
 .time {
-  font-size: 6vw;
+  font-size: 6rcap;
   line-height: 1;
   margin: 1rem;
   text-transform: uppercase;
@@ -85,32 +85,17 @@ p {
 }
 
 .best {
-padding: 2px;
-  font-size: 24px;
+  padding: 2px;
+  font-size: 125%;
   text-align: center;
   line-height: 1.2;
   font-family: "Kode Mono";
 }
 
-.banner {
-  position: fixed;
-    top: 18%;
-    left: -2.2%;
-    background-color: rgba(255, 0, 0, 0.824);
-    color: white;
-    padding: 0.3% 1.1%;
-    font-size: 2rcap;
-    transform: rotate(-45deg);
-    transform-origin: 0 0;
-    z-index: 0; /* Ensure it stays on top */
-    width: 200px; /* Adjust width as necessary */
-    text-align: center; /* Center the text */
-    font-family: "Inter";
-}
 
 .credit {
   padding: 2px;
-  font-size: 23px;
+  font-size: 125%;
   text-align: center;
   line-height: 1;
   font-family: "Inter";
@@ -127,6 +112,46 @@ padding: 2px;
   border: 1px solid grey;
   padding: 1%;
   border-radius: 1rcap;
+}
+
+
+#floating-badge {
+  font-family: "Inter";
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  background-color: rgba(239, 8, 8, 0.952);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  animation: sizeChange 2s infinite;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+/* Animation for the size increase and decrease effect */
+@keyframes sizeChange {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.2);
+  }
+}
+
+/* Explode effect */
+.explode {
+  transform: scale(2);
+  opacity: 0;
 }
 
 @font-face {
