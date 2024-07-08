@@ -2,7 +2,7 @@ html {
   height: 100%;
   font-family: sans-serif;
   overflow-x: auto;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 
 body {
@@ -26,7 +26,7 @@ body {
 }
 
 .light-strip.on .light:nth-child(1n + 3) {
-  background: #41e8c1;
+  background: #21a1b2;
 }
 
 .f1-lights {
@@ -62,43 +62,91 @@ body {
 }
 
 p {
-  font-size: 22px;
+  font-size: 24.5px;
   text-align: center;
   line-height: 1.4;
   margin: 1em;
   margin-bottom: 0;
-  font-family: "Raleway Heavy";
+  font-family: "Noto Sans";
 }
 
 .time {
-  font-size: 90px;
-  font-size: 12vw;
+  font-size: 6vw;
   line-height: 1;
   margin: 1rem;
   text-transform: uppercase;
   will-change: transform;
   text-align: center;
-  font-family: "Oswald Light";
+  font-family: "Kode Mono";
 }
 
 .time.anim {
   animation: bang 0.14s cubic-bezier(0.175, 0.885, 0.32, 1.275)
 }
 
-.best,
-.credit {
-  margin: 1%;
-  font-size: 20px;
+.best {
+padding: 2px;
+  font-size: 24px;
   text-align: center;
-  line-height: 1.4;
-  font-family: "Oswald Light";
+  line-height: 1.2;
+  font-family: "Kode Mono";
 }
 
-.border {
-  margin: 1rem;
+.banner {
+  position: fixed;
+    top: 18%;
+    left: -2.2%;
+    background-color: rgba(255, 0, 0, 0.824);
+    color: white;
+    padding: 0.3% 1.1%;
+    font-size: 2rcap;
+    transform: rotate(-45deg);
+    transform-origin: 0 0;
+    z-index: 0; /* Ensure it stays on top */
+    width: 200px; /* Adjust width as necessary */
+    text-align: center; /* Center the text */
+    font-family: "Inter";
+}
+
+.credit {
+  padding: 2px;
+  font-size: 23px;
+  text-align: center;
+  line-height: 1;
+  font-family: "Inter";
+}
+
+/* .border {
+  padding:3px;
   border: 1px solid #ada6a6;
-  background: white;
-  border-radius: 2em;
+  border-radius: 1rcap;
+  text-overflow: inherit;
+} */
+
+.border {
+  border: 1px solid grey;
+  padding: 1%;
+  border-radius: 1rcap;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('noto-sans.ttf');
+}
+
+@font-face {
+  font-family: "Kode Mono";
+  src: url('kode-mono.ttf');
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url('inter.ttf');
+}
+
+@font-face {
+  font-family: "Inter Tight";
+  src: url('inter-tight.ttf');
 }
 
 @keyframes bang {
@@ -107,44 +155,8 @@ p {
   }
 }
 
-a:link {
-  text-decoration: none;
+a {
+  text-decoration: underline;
+  color: #208817;
 }
 
-/*
-___
-/ _ \
-| / \ |
-| \_/ |
-\___/ ___
-_|_|_/[_]\__==_
-[---------------]
-| O   /---\     |
-|    |     |    |
-|     \___/     |
-[---------------]
-     [___]
-      | |\\
-      | | \\
-      [ ]  \\_
-     /|_|\  ( \
-    //| |\\  \ \
-   // | | \\  \ \
-  //  |_|  \\  \_\
- //   | |   \\
-//\   | |   /\\
-//  \  | |  /  \\
-//    \ | | /    \\
-//      \|_|/      \\
-//        [_]        \\
-//          H          \\
-//           H           \\
-//            H            \\
-//             H             \\
-//              H              \\
-//                               \\
-//                                 \\
-
-Smile! You're beautiful!
-
-*/
