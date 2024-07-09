@@ -1,16 +1,26 @@
 html {
   height: 100%;
   font-family: sans-serif;
-  overflow-x: auto;
+  overflow-x: scroll;
   overflow-y: scroll;
 }
 
 body {
   display: flex;
-  flex-flow: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+  overflow: scroll;
+}
+
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .light {
@@ -25,7 +35,7 @@ body {
   padding-top: 100%;
 }
 
-.light-strip.on .light:nth-child(1n + 3) {
+.light-strip.on .light:nth-child(1n + 1) {
   background: #21a1b2;
 }
 
@@ -39,7 +49,7 @@ body {
 .light-strip {
   background: black;
   border-radius: 11px;
-  margin: 0 2px;
+  margin: 0 px;
   position: relative;
   flex: 1;
 }
