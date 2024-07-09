@@ -34,7 +34,7 @@ body {
   padding-top: 100%;
 }
 
-.light-strip.on .light:nth-child(1n + 1) {
+.light-strip.on .light:nth-child(1n + 2) {
   background: #21a1b2;
 }
 
@@ -131,7 +131,7 @@ p {
   right: 25px;
   width: 80px;
   height: 80px;
-  background-color: rgba(235, 231, 0, 0.826);
+  background-color: #cc0000e2;
   color: white;
   border-radius: 50%;
   display: flex;
@@ -149,18 +149,19 @@ p {
   /* Ensure the gloss effect stays within the circle */
 }
 
-/* #floating-badge::before {
+#floating-badge::before {
   content: '';
   position: absolute;
   top: -50%;
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle at 50% 50%, rgba(171, 171, 171, 0.297) 12%, rgba(216, 215, 215, 0.119) 25%, transparent 45%);
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 40%, transparent 60%);
   transform: rotate(45deg);
   z-index: 1;
   pointer-events: none;
-} */
+}
+
 
 /* heart style effect */
 /* @keyframes sizeChange {
@@ -191,7 +192,7 @@ p {
   100% {
     transform: scale(1.2);
   }
-/* 
+/*
   50% {
     transform: scale(0.95);
   } */
@@ -230,7 +231,7 @@ p {
 
 a {
   text-decoration: underline;
-  color: #208817;
+  color: #cc0000e2;
   outline: none; /* Prevent focusing on the hyperlink */
 }
 
