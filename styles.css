@@ -71,7 +71,7 @@ body {
 }
 
 p {
-  font-size: 150%;
+  font-size: 165%;
   text-align: center;
   line-height: 1.4;
   margin: 1em;
@@ -95,7 +95,7 @@ p {
 
 .best {
   padding: 2px;
-  font-size: 170%;
+  font-size: 180%;
   text-align: center;
   line-height: 1.2;
   font-family: "Kode Mono";
@@ -104,7 +104,7 @@ p {
 
 .credit {
   padding: 2px;
-  font-size: 165%;
+  font-size: 175%;
   text-align: center;
   line-height: 1;
   font-family: "Inter";
@@ -129,8 +129,8 @@ p {
   position: fixed;
   bottom: 25px;
   right: 25px;
-  width: 80px;
-  height: 80px;
+  width: 110px;
+  height: 110px;
   background-color: #cc0000e2;
   color: white;
   border-radius: 50%;
@@ -139,7 +139,7 @@ p {
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 110%;
+  font-size: 140%;
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
   z-index: 1000;
@@ -186,18 +186,18 @@ p {
 } */
 
 /* normal size style effect */
-@keyframes sizeChange {
+/* @keyframes sizeChange {
 
   0%,
   100% {
-    transform: scale(1.2);
+    transform: scale(1.0);
   }
-/*
+
   50% {
     transform: scale(0.95);
-  } */
+  }
 
-}
+} */
 
 .kode-mono {
   font-family: "Kode Mono", monospace;
