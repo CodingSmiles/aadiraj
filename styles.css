@@ -71,7 +71,7 @@ body {
 }
 
 p {
-  font-size: 120%;
+  font-size: 150%;
   text-align: center;
   line-height: 1.4;
   margin: 1em;
@@ -80,7 +80,7 @@ p {
 }
 
 .time {
-  font-size: 8rcap;
+  font-size:  669%    ;
   line-height: 1;
   margin: 1rem;
   text-transform: uppercase;
@@ -95,7 +95,7 @@ p {
 
 .best {
   padding: 2px;
-  font-size: 140%;
+  font-size: 170%;
   text-align: center;
   line-height: 1.2;
   font-family: "Kode Mono";
@@ -104,7 +104,7 @@ p {
 
 .credit {
   padding: 2px;
-  font-size: 135%;
+  font-size: 165%;
   text-align: center;
   line-height: 1;
   font-family: "Inter";
@@ -118,7 +118,7 @@ p {
 } */
 
 .border {
-  border: 1px solid grey;
+  border: 5px groove grey;
   padding: 1%;
   border-radius: 1rcap;
 }
@@ -131,7 +131,7 @@ p {
   right: 25px;
   width: 80px;
   height: 80px;
-  background-color: rgba(255, 0, 0, 0.895);
+  background-color: rgba(235, 231, 0, 0.826);
   color: white;
   border-radius: 50%;
   display: flex;
@@ -149,19 +149,18 @@ p {
   /* Ensure the gloss effect stays within the circle */
 }
 
-/* Gloss effect */
-#floating-badge::before {
+/* #floating-badge::before {
   content: '';
   position: absolute;
   top: -50%;
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.297) 0%, rgba(255, 255, 255, 0.1) 40%, transparent 60%, );
+  background: radial-gradient(circle at 50% 50%, rgba(171, 171, 171, 0.297) 12%, rgba(216, 215, 215, 0.119) 25%, transparent 45%);
   transform: rotate(45deg);
   z-index: 1;
   pointer-events: none;
-}
+} */
 
 /* heart style effect */
 /* @keyframes sizeChange {
@@ -192,10 +191,10 @@ p {
   100% {
     transform: scale(1.2);
   }
-
+/* 
   50% {
-    transform: scale(0.98);
-  }
+    transform: scale(0.95);
+  } */
 
 }
 
