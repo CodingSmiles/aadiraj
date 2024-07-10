@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
   let lightsOutTime = 0;
   let raf, timeout;
 
-  // Initializing best time display
   if (bestTime !== Infinity) {
     bestTimeDisplay.textContent = formatTime(bestTime);
   }
@@ -84,7 +83,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // Event listeners
   addEventListener('touchstart', tap, { passive: false });
   addEventListener('mousedown', event => {
     if (event.button === 0) tap(event);
@@ -93,12 +91,10 @@ document.addEventListener('DOMContentLoaded', function() {
     if (event.key === ' ') tap(event);
   }, { passive: false });
 
-  // Floating badge click event
   document.getElementById('floating-badge').addEventListener('click', function() {
     window.open('https://www.youtube.com/watch?v=xvFZjo5PgG0', '_blank');
   });
 
-  // Function to update badge color with the size change animation
   function updateBadgeColor() {
     const badge = document.getElementById('floating-badge');
     badge.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
@@ -108,7 +104,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 500);
   }
 
-  // Initial call and interval for badge color update
   updateBadgeColor();
   setInterval(updateBadgeColor, 3000);
 });
