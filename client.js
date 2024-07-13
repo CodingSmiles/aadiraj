@@ -60,7 +60,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let thisTime = timeStamp - lightsOutTime;
     if (reduceTime) {
-      thisTime -= 200; // Reduce the time by 200ms if 'a' was pressed
+      thisTime -= 222; // Reduce the time by 200ms if 'a' was pressed
+    }
+
+    // Ensure time is not negative or zero
+    if (thisTime < 0.00001) {
+      thisTime = 0.001;
     }
 
     timeDisplay.textContent = formatTime(thisTime);
