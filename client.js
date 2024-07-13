@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let started = false;
   let lightsOutTime = 0;
   let raf, timeout;
+  let reduceTime = false; // New variable to track if time should be reduced
 
   if (bestTime !== Infinity) {
     bestTimeDisplay.textContent = formatTime(bestTime);
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     timeDisplay.textContent = '00.000';
     timeDisplay.classList.remove('anim');
     lightsOutTime = 0;
+    reduceTime = false; // Reset the time reduction flag
 
     const lightsStart = performance.now();
     let lightsOn = 0;
@@ -56,7 +58,11 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
 
-    const thisTime = timeStamp - lightsOutTime;
+    let thisTime = timeStamp - lightsOutTime;
+    if (reduceTime) {
+      thisTime -= 200; // Reduce the time by 200ms if 'a' was pressed
+    }
+
     timeDisplay.textContent = formatTime(thisTime);
 
     if (thisTime < bestTime) {
@@ -83,13 +89,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
+  function handleKeyPress(event) {
+    if (event.key === ' ') {
+      tap(event);
+    } else if (event.key === 'a' && started) {
+      reduceTime = true; // Set the flag to reduce time
+    }
+  }
+
   addEventListener('touchstart', tap, { passive: false });
   addEventListener('mousedown', event => {
     if (event.button === 0) tap(event);
   }, { passive: false });
-  addEventListener('keydown', event => {
-    if (event.key === ' ') tap(event);
-  }, { passive: false });
+  addEventListener('keydown', handleKeyPress, { passive: false });
 
   document.getElementById('floating-badge').addEventListener('click', function() {
     window.open('https://www.youtube.com/watch?v=xvFZjo5PgG0', '_blank');
